@@ -1,16 +1,21 @@
-function Node(id: number) {
-    const style = {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#FFFFFF",
-        width: 80,
-        height: 80,
-        borderRadius: 3200,
-        borderWidth: 2,
-        borderColor: "#000000",
-        borderStyle: "solid",
-      };
+import type { FC } from "react";
+
+const Node: FC<any> = (id: number) => {
+
+  const style = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    width: 80,
+    height: 80,
+    borderRadius: 3200,
+    borderWidth: 2,
+    borderColor: "#000000",
+    borderStyle: "solid",
+  };
+  
+  return (
   
     <div
         style={{
@@ -24,7 +29,7 @@ function Node(id: number) {
             <span style={{ fontWeight: "bold" }}>{id}</span>
           </div>
     </div>
-
+  )
 }
 export default Node;
   

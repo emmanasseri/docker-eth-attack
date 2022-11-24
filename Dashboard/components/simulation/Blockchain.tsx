@@ -21,7 +21,7 @@ export const Blockchain = (nodes: PropTypes) => {
     }
     console.log("there are ", nodeArray.length, " nodes");
   }  
-
+  
   useEffect(() => {
     Subscription.on("data", (data) => {
       const block = (
@@ -41,17 +41,16 @@ export const Blockchain = (nodes: PropTypes) => {
           <Block key={data.hash} data={data}></Block>
         </div>
       );
-
       setIndex(index + 1);
       setBlocks([...blocks, block]);
     });
     return () => {};
-  });
+  });//A function that executes conditionally when the dependencies you declared have changed.
 
   return (
     <div>
       <Box>{nodeArray}</Box>
-      <Box>{blocks}</Box>;
+      <Box>{blocks}</Box>
     </div>
   )
 };
