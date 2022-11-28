@@ -7,7 +7,7 @@ import { Blockchain } from "../components";
 
 const Home: NextPage = () => {
   const [nodes, setNodes] = useState([
-    " ",
+    "",
     "",
     "",
     "",

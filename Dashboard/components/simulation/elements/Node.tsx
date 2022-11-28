@@ -14,7 +14,7 @@ const Node: FC<any> = (id: number) => {
     borderColor: "#000000",
     borderStyle: "solid",
   };
-  
+
   return (
   
     <div
@@ -26,7 +26,7 @@ const Node: FC<any> = (id: number) => {
           }}
         >
           <div style={style} key={id.toString()}>
-            <span style={{ fontWeight: "bold" }}>{id}</span>
+            <span style={{ fontWeight: "bold" }} key={id.toString()}>{id}</span>
           </div>
     </div>
   )
